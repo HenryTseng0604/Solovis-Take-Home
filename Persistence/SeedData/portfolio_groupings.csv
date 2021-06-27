@@ -1,0 +1,24 @@
+﻿Id,ParentId,Label
+80,NULL,Test Parent Tag
+81,NULL,U.S. Equity
+82,NULL,Absolute Return
+83,NULL,Real Assets
+84,NULL,International Equity
+85,NULL,Distressed Debt
+86,NULL,Private Equity
+87,NULL,[Unknown]
+88,NULL,Cash & Fixed Income
+122,84,Emerging Markets
+123,84,Developed
+124,82,Long/Short
+125,80,Test Child Tag 2
+126,86,Buyout
+127,86,Venture Capital
+128,88,Fixed Income
+129,83,Real Estate
+130,88,Cash
+131,83,Natural Resources
+132,80,Test Child Tag 1
+133,82,Event Driven
+134,127,Test VC 1
+135,127,Credit
