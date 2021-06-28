@@ -12,7 +12,7 @@ const requests = {
     post: <T> (url: string, body: {}) => axios.post<T>(url, body).then(responseBody)
 }
 
-const Portfolio = {
+const Portfolios = {
     result: () => requests.get<Portfolio>('/Portfolio')
 }
 
@@ -25,7 +25,7 @@ const Projection = {
 }
 
 const agent = {
-    Portfolio,
+    Portfolios,
     Investments,
     Projection
 }

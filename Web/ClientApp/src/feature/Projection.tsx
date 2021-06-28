@@ -1,9 +1,7 @@
-﻿import axios from "axios";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+﻿import { Formik, Form, Field, ErrorMessage } from "formik";
 import React from "react";
 import * as Yup from 'yup';
 import { useEffect, useState } from "react";
-import { Investment } from '../app/model/Investment';
 import { Button, Container, Dropdown, FormField, Header, Label } from "semantic-ui-react";
 import NumberFormat from "react-number-format";
 import agent from "../app/api/agent";
@@ -17,12 +15,11 @@ interface investmentOption {
 
 const Projection = () => {
     const [investmentOptions, setInvestmentOptions] = useState<investmentOption[]>([]);
-    const initialState = {
+    const term = {
         CurrentValue: '',
         AnnualizedReturn: '',
         NumberOfDays: ''
     }
-    const [term, setTerm] = useState(initialState);
     const initialResult = {
         Display: 'none',
         ProjectedValue: 0,

@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\api\agent.ts" />
     <None Remove="ClientApp\src\app\model\FinancialTerm.ts" />
     <None Remove="ClientApp\src\app\model\Investment.ts" />
     <None Remove="ClientApp\src\app\model\payload.ts" />
@@ -36,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\api\agent.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\FinancialTerm.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\Investment.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\payload.ts" />

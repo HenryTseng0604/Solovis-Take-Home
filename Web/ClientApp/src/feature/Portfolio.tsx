@@ -1,11 +1,9 @@
-import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Container, Header } from 'semantic-ui-react';
 import agent from '../app/api/agent';
 import { RenderBarChart } from '../app/layout/BarChart';
 import { PortfolioGroupList } from '../app/layout/PortfolioGroupList';
-import { Portfolio } from '../app/model/Portfolio';
 import { PortfolioGroup } from '../app/model/PortfolioGroup';
 
 const Home = () => {
@@ -13,12 +11,12 @@ const Home = () => {
     const [chartData, setChartData] = useState<any>([]);
 
     useEffect(() => {
-        agent.Portfolio.result().then(response => {
+        agent.Portfolios.result().then(response => {
             setPortfolioGroups(response.portfolioGroups);
             let output: any[] = [];
-            response.portfolioGroups.map((group: any) => {
-                output.push({ Group: group.label, Value: group.totalValue / 1000 });
-            });
+            response.portfolioGroups.map((group: any) => 
+                output.push({ Group: group.label, Value: group.totalValue / 1000 })
+            );
             setChartData({
                 name: "Total Value($ in thousands)",
                 xKey: "Group",
